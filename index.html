@@ -7,21 +7,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <div id="backImg">
-    <!-- <style> 
-    body {
+    <style> 
+    /* body {
         background-image: url('https://images.squarespace-cdn.com/content/v1/4f5fd2b824ac2337998d0115/1471295529918-B3QZKBIGK1O05N6AQ6LK/ke17ZwdGBToddI8pDm48kLGZ4u4gpa59H3azvmkNtxF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luj0xCD0oh5KMc0gpox0u8MPFqcidMINjtZSm0B8Obq7c-oBfWEhE6N9owt2uI9Ug/Phish+2016+from+gif+025crop.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
     }
     </style>
-    </div> -->
+    </div> */
+
 </head>
 <body>
-    <h1>Phish Trivia</h1>
-    <div ="buttons">
-        <button class="firstButton" id="play">Play</button>
+    <h1 id="title">Phish Trivia</h1>
+    
+    
+    <button id="openModal">Game has begun</button>
+        <div id="modal">
+        <div id="modal-textbox">
+            <a id="close" href="#">Close</a>
+            <h1>Game has begun</h1>
+        </div>
+    </div>
+    <button class="firstButton" id="play">Play</button>
         <button class="secondButton" id="restart">Restart</button>
+        <button class="thirdButton" id="nextButton">Next</button>
+        <button class="forthButton" id="backButton">Back</button>
         <span id="player1">Player 1</span>
         <span id="player2">Player 2</span>
     </div>
