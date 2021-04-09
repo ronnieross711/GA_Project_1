@@ -1,5 +1,5 @@
 /* style {
-    background-image: url('https://preview.redd.it/ukxyrxfgi8721.jpg?width=960&crop=smart&auto=webp&s=e5bb4d97f6111663718f51fa53bf311d2fb72c0c')
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/phish-donut-pattern-ryan-rock-artist.jpg')
     background-repeat: no-repeat;
     width: 10px;
     height: 20px;
@@ -17,6 +17,9 @@ body {
     text-align: center;
     
     
+}
+.container {
+    display:block;
 }
 
 h1{
