@@ -19,11 +19,15 @@ body {
     
 }
 .container {
-    display:block;
+	background-color: rgba(186, 186, 214, .7);
+	padding: 4rem;
+}
+.current {
+    display: block;
 }
 
 h1{
-    color: crimson;
+    color:floralwhite;
 }
 
 #modal {
