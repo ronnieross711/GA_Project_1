@@ -15,34 +15,29 @@
         background-size: cover;
     }
     </style>
-    </div>
-
 </head>
-<body>
-    <h1 id="title">Phish Triviaaa</h1>
-        <button class="firstButton" id="play">Play</button>
-        <button class="secondButton" id="restart">Restart</button>
-        <button class="thirdButton" id="nextButton">Next</button>
-        <button class="forthButton" id="backButton">Back</button>
-        <span id="player1">Player 1</span>
-        <span id="player2">Player 2</span>
-    </div> 
 
+<body>
+    <h1 id="title">Phish Trivia</h1>
+    <button class="firstButton" id="play">Play</button>
     <div class="intro">
-    <p class="qestionBox" id="question1">This is a trivia game about the band Phish. Let's see how much you know and 
+    <p class="introduction">This is a trivia game about the band Phish. Let's see how much you know and 
         how big of a Phish Head you are! Click Play to begin.
     </p>
     </div>
 
-    <div class="container" id="question1">
-        <h2>What year did phish officially become a band?</h2>
-        <div class="aswers">
-            <button id="answer1">1984</button>
-            <button id="answer2">2001</button>
-            <button id="answer3">1981</button>
-            <button id="answer4">1994</button>
-            <button class="Next" id="nextButton">Next</button>
-            <button class="Back" id="backButton">Back</button>
+    <div class="container">
+        <div id="questionHolder">
+        <div class="controls">
+            <button class="next" id="nextButton">Next</button>
+            <button class="back" id="backButton">Back</button>
+        </div>
+        <h1 id="question"></h1>
+        <div class="btn-grid" id="answerButtons">
+            <button class="answerButton" id="answer1"></button>
+            <button class="answerButton" id="answer2"></button>
+            <button class="answerButton" id="answer3"></button>
+            <button class="answerButton" id="answer4"></button>
         </div>
     </div>
     

@@ -10,176 +10,92 @@ let questions = [
   answer: "Poster NutBag"
 },
 
-{ question: "How many Festivals has Phish thrown",
+{ question: "How many Festivals has Phish thrown?",
   choices: [5, 7, 10, 11],
   answer: 11
 
 },
 
-{ question: "Who is the Guitar maker of Trey Anastasio's guitar",
+// copy-paste here down
+
+{ question: "Who is the Guitar maker of Trey Anastasio's guitar?",
   choices: ["Fender", "Gibson", "Modulus", 'Languedoc'],
   answer: "Languedoc"
 },
+
+    
+{ question: "What is the Drummer's name?",
+  choices: ["Derek Trucks", "Zach Rice", "Neil Pert", "Jon Fishmna"],
+  answer: "Jon Fishman"
+},
+
+{ question: "Who was the founding memeber of Phish originally, but left the band?",
+  choices: ["Jeff HOldsworth", "Page McConnell", "Jerry Garcia", "Neil Young"],
+  answer: "Jeff HOldsworth"
+},
+
+{ question: "Which festival was thrown in 2003?",
+  choices: ["Festival 8", "IT", "The Great Went", "Clifford Ball"],
+  answer: "IT"
+},
+
+{ question: "What album did Phish cover on Halloween 1996?",
+  choices: ["Dark Side of the Moon", "Remain In Light", "Led Zeppelin IV", "American Beauty"],
+  answer: "Remain In Light"
+},
+
+{ question: "What year did they tour in Japan?",
+  choices: [1999, 2000, 2001, 1998],
+  answer: 2000
+},
+
+{ question: "WHat year did the NYE gag go wrong, and Trey got stuck?",
+  choices: [2019, 2018, 2015, 2021],
+  answer: 2019
+},
+
+{ question: "Who was the first Phish Phan?",
+  choices: ["Jimmy", "Ronnie", "Brad", "Amy"],
+  answer: "Amy"
+},
+
+{ question: "Finish the Lyric: 'I saw you....",
+  choices: ["Stading there", "Lookin' through the window", "Dancing in the streets", "With a ticket stub in your hand"],
+  answer: "With a ticket stub in your hand"
+},
+
+{ question: "What song do they sing part of in Japanese?",
+  choices: ["Stash", "Gumbo", "Meatstick", "Golden Age"],
+  answer: "Meatstick"
+},
+
+{ question: "Which years did Phish ride in on a hotdog for NYE?",
+  choices: ["1997 and 1998", "2000 and 2003", "1999 and 2011", "2015 and 2018"],
+  answer: "1999 and 2011"
+},
+
+{ question: "Who wrote 'My Sweet One'?",
+  choices: ["Trey Anastasio", "Page McConnell", "Jon Fishman", "Mike Gordon"],
+  answer: "Jon Fishman"
+},
+
+{ question: "What islands did Phish go to for the legendary island tour?",
+  choices: ["Bahamas", "Florida Keys", "Long Island and Rhode Island", "Caymen Islands"],
+  answer: "Long Island and Rhode Island"
+},
+ 
+{ question: "Which festival almost got totally rained out and was a mud pit for 3 days?",
+  choices: ["The Great Went", "Coventry", "Magnaball", "Curvball"],
+  answer: "Coventry"
+},
+   
+{ question: "Which band member graduated from the University of Vermont?",
+  choices: ["Mike Gordon", "Page McConnell", "Jon Fishman", "Trey Anastasio"],
+  answer: "Mike Gordon"
+},
+
+{ question: "What is Page McConnell's nickname?",
+  choices: ["Lawn Boy", "Big Red", "Leo", "Piano Man"],
+  answer: "Leo"
+},
 ]
-    
-
-
-    
-
-
-
- 
-
-
-
-
- 
-What is the Drummer's name
-    Derek Trucks
-    Zach Rice
-    Neil Pert
-    Jon Fishman
-    Butto
-
-
-
- 
-Who was the founding memeber of Phish originally, but left the band
-    Jeff Holdsworth
-    Page McConell
-    Jerry Garcia
-    Neil Young
-    Butto
-
-
-
- 
-Which festival was thrown in 2003
-    Festival 8
-    IT
-    The Great Went
-    Clifford Ball
-    Butto
-
-
-
- 
-What album hey cover Halloween 1996
-    Dark of The Moon
-    Remain In Light
-    Led Zeppelin IV
-    American Beauty
-    Butto
-
-
-
- 
-What years hey tour Japan
-    1999
-    2000
-    2001
-    1998
-    Butto
-
-
-
- 
-What year he NYE gag go wrong, and Trey got stuck
-    2019-2020
-    2018-2019
-    2015-2016
-    2020-2021
-    Butto
-
-
-
- 
-Who was the first Phish Phan
-    Jimmy
-    Ronnie
-    Amy
-    Brad
-    Butto
-
-
-
- 
-Finish the Lyric I saw you ....
-    standing there
-    lookin' through the window
-    dancing in the street
-    with a ticket stub in your hand
-    Butto
-
-
-
- 
-What song do they sing part of in Japanese
-    Stash
-    Gumbo
-    Meatstick
-    Golden Age
-
-
-
-
- 
-Which years hish in on a hotdog for NYE
-    1996-1997 & 2000-2001
-    1999-2000 & 2010-2011
-    1989-1990 & 2011-2012
-    1999-2000 & 2011-2012
-
-
-
-
- 
-Who wrote My Sweet One
-    Trey Anastasio
-    Page McConnell
-    Jon Fishman
-    Mike Gordon
-    Butto
-
-
-
- 
-What islands hish go to for the legendary island tour
-    Bahamas
-    Fl Keys
-    Long Island & Rhode Island
-    Tr  & Tobago
-    Butto
-
-
-
- 
-What festival was a mud pit
-    The Great Went
-    Coventry
-    Curveball
-    Magnaball
-    Butto
-
-
-
- 
-Which band memeber graduated from the University of Vermont
-    Mike Gordon
-    Page McConnell
-    Jon Fishman
-    Trey Anastasio
-    Butto
-
-
-
- 
-What is Page McConnell's nickname
-    Lawn Boy
-    Big Red
-    Leo
-    Piano Man
-    Butto
-
-
-

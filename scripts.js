@@ -1,82 +1,160 @@
-// Grab the h1 and first p tags and the play button
-// 
+let questions = [
+    { question: 'What year did Phish officially become a band?',
+    choices: [1984, 2001, 1981, 1994],
+    answer: 1984
+},
 
-const playButton = document.getElementById('play')
-// console.log(playButton)
-const restartButton = document.getElementById('restart')
-const allQuestions = document.querySelectorAll('.container')
-// console.log(allQuestions);
-const main = document.querySelector('#container')
+    
+{ question: "What is the name of Jimmy's cat?",
+  choices: ["Sara", "Col. Forbin", "Poster NutBag", "Ocelot"],
+  answer: "Poster NutBag"
+},
 
-let allQuestions = [
-    {question: "jkasdhfkjahsdf", answer}
+{ question: "How many Festivals has Phish thrown?",
+  choices: [5, 7, 10, 11],
+  answer: 11
+
+},
+
+{ question: "Who is the Guitar maker of Trey Anastasio's guitar?",
+  choices: ["Fender", "Gibson", "Modulus", 'Languedoc'],
+  answer: "Languedoc"
+},
+
+{ question: "Who is the Guitar maker of Trey Anastasio's guitar?",
+  choices: ["Fender", "Gibson", "Modulus", 'Languedoc'],
+  answer: "Languedoc"
+},
+
+    
+{ question: "What is the Drummer's name?",
+  choices: ["Derek Trucks", "Zach Rice", "Neil Pert", "Jon Fishmna"],
+  answer: "Jon Fishman"
+},
+
+{ question: "Who was the founding memeber of Phish originally, but left the band?",
+  choices: ["Jeff HOldsworth", "Page McConnell", "Jerry Garcia", "Neil Young"],
+  answer: "Jeff HOldsworth"
+},
+
+{ question: "Which festival was thrown in 2003?",
+  choices: ["Festival 8", "IT", "The Great Went", "Clifford Ball"],
+  answer: "IT"
+},
+
+{ question: "What album did Phish cover on Halloween 1996?",
+  choices: ["Dark Side of the Moon", "Remain In Light", "Led Zeppelin IV", "American Beauty"],
+  answer: "Remain In Light"
+},
+
+{ question: "What year did they tour in Japan?",
+  choices: [1999, 2000, 2001, 1998],
+  answer: 2000
+},
+
+{ question: "WHat year did the NYE gag go wrong, and Trey got stuck?",
+  choices: [2019, 2018, 2015, 2021],
+  answer: 2019
+},
+
+{ question: "Who was the first Phish Phan?",
+  choices: ["Jimmy", "Ronnie", "Brad", "Amy"],
+  answer: "Amy"
+},
+
+{ question: "Finish the Lyric: 'I saw you....",
+  choices: ["Stading there", "Lookin' through the window", "Dancing in the streets", "With a ticket stub in your hand"],
+  answer: "With a ticket stub in your hand"
+},
+
+{ question: "What song do they sing part of in Japanese?",
+  choices: ["Stash", "Gumbo", "Meatstick", "Golden Age"],
+  answer: "Meatstick"
+},
+
+{ question: "Which years did Phish ride in on a hotdog for NYE?",
+  choices: ["1997 and 1998", "2000 and 2003", "1999 and 2011", "2015 and 2018"],
+  answer: "1999 and 2011"
+},
+
+{ question: "Who wrote 'My Sweet One'?",
+  choices: ["Trey Anastasio", "Page McConnell", "Jon Fishman", "Mike Gordon"],
+  answer: "Jon Fishman"
+},
+
+{ question: "What islands did Phish go to for the legendary island tour?",
+  choices: ["Bahamas", "Florida Keys", "Long Island and Rhode Island", "Caymen Islands"],
+  answer: "Long Island and Rhode Island"
+},
+ 
+{ question: "Which festival almost got totally rained out and was a mud pit for 3 days?",
+  choices: ["The Great Went", "Coventry", "Magnaball", "Curvball"],
+  answer: "Coventry"
+},
+   
+{ question: "Which band member graduated from the University of Vermont?",
+  choices: ["Mike Gordon", "Page McConnell", "Jon Fishman", "Trey Anastasio"],
+  answer: "Mike Gordon"
+},
+
+{ question: "What is Page McConnell's nickname?",
+  choices: ["Lawn Boy", "Big Red", "Leo", "Piano Man"],
+  answer: "Leo"
+},
 ]
 
-let questions = allQuestions[0]
-// function userClick(){
-    // turning allQuestions into a proper array
-    let a = Array.from(allQuestions)
-    console.log(a)
-    let filteredList = a.filter(question => question.length)
-console.log(filteredList)
 
-function newFunction(x) {
-   return x.classList.contains('current')
+const restartButton = document.getElementById('restart')
+
+const answers = document.querySelectorAll(".answerButtons")
+
+// const correctAnswer = 
+// let num = 0
+// question.innerHTML = questions[num].question
+
+// const nextButton = document.querySelector('#nextButton')
+// function goNext() {
+//     num++
+    
+// }
+// nextButton.addEventListener('click', goNext)
+
+let i = 0
+let h1Question = document.getElementById("question")
+
+let nextButton = document.getElementById("nextButton")
+
+function nextQuestion(e) {
+    // e.preventDefault()
+    i++
+    console.log(i)
+    console.log(questions[i].question)
+    h1Question.innerHTML = questions[i].question 
 }
+nextButton.addEventListener('click', nextQuestion)
 
-function clickPlay(e) {
-    allQuestions[0].classList.add('current')
+let backButton = document.getElementById("backButton")
+
+function goBack(e) {
+    i--
+    h1Question.innerHTML = questions[i].question
 }
+backButton.addEventListener('click', goBack)
+ // h1Question.innerHTML = questions[i].question 
 
-playButton.addEventListener('click', clickPlay)
 
-const nextButton = document.querySelector('#nextButton')
-const q1= document.getElementById('#question1')
-const q2 = document.getElementById('#question2')
-const q3 = document.getElementById('#question3')
 
-function startGame() {
-    playButton.classList.add('hide')
+// function playGame() {
+//     console.log('working')
+//     playButton.classList.add("hide")
+//     // question.classList.remove("hide")
+// }
+// playButton.addEventListener('click', playGame )
+
+
+
+
+
+function selectAnswer() {
+
 }
-function goNext(e) {
-      allQuestions[1].classList.add('current')
-}
-nextButton.addEventListener('click', goNext)
-
-
-// First Question
-const answer1 = document.querySelector("#answer1")
-function correctAnswer(e) {
-    answer1.onclick = alert('Correct!')
-}
-answer1.addEventListener('click', correctAnswer)
-
-const answer2 = document.querySelector('#answer2')
-function wrongAnswer(e) {
-    answer2.onclick = alert('Wrong, try again')
-}
-answer2.addEventListener('click', wrongAnswer)
-
-const answer3 = document.querySelector('#answer3')
-function wrongAnswer(e) {
-    answer3.onlcick = alert('Wrong, try again')
-}
-answer3.addEventListener('click', wrongAnswer)
-
-const answer4 = document.querySelector('#answer4')
-function wrongAnswer(e) {
-    answer4.onlcick = alert('Wrong, try again')
-}
-answer4.addEventListener('click', wrongAnswer)
-// First Question
-
-
-
-function clickRestart(e) {
-    restartButton.onclick = alert('Start Over!')
-}
-restartButton.addEventListener('click', clickRestart)
-
-// Do i need to make a function for each question to show on the page?
-// Or should I just give them all the same id to make it easier?
-// Is the only way to do it by adding the code in the head of your html?
