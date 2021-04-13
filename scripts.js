@@ -104,31 +104,21 @@ let questions = [
 ]
 
 
-const restartButton = document.getElementById('restart')
-
-const answers = document.querySelectorAll(".answerButtons")
-
-// const correctAnswer = 
-// let num = 0
-// question.innerHTML = questions[num].question
-
-// const nextButton = document.querySelector('#nextButton')
-// function goNext() {
-//     num++
-    
-// }
-// nextButton.addEventListener('click', goNext)
-
 let i = 0
 let h1Question = document.getElementById("question")
 
 let nextButton = document.getElementById("nextButton")
 
 function nextQuestion(e) {
-    // e.preventDefault()
     i++
-    console.log(i)
-    console.log(questions[i].question)
+    let choices = questions[i].choices
+    
+    for(let index = 0; index < choices.length; index++ ) {
+       
+    answerButtons[index].innerHTML = choices[index]
+     }
+    
+    
     h1Question.innerHTML = questions[i].question 
 }
 nextButton.addEventListener('click', nextQuestion)
@@ -142,19 +132,32 @@ function goBack(e) {
 backButton.addEventListener('click', goBack)
  // h1Question.innerHTML = questions[i].question 
 
+ let answerButtons = document.querySelectorAll(".answerButton")
+ console.log(answerButtons)
+ 
 
+ function selectAnswer(e) { 
+    // check to see if user clicked correct answer
+    e.preventDefault()
+    console.log(questions[i].answer)
+    console.log(e.target.innerText)
+    if(e.target.innerText === questions[i].answer){
 
-// function playGame() {
-//     console.log('working')
-//     playButton.classList.add("hide")
-//     // question.classList.remove("hide")
-// }
-// playButton.addEventListener('click', playGame )
-
-
-
-
-
-function selectAnswer() {
-
+    }
+    // console.log(questions[i].choices)
 }
+answerButtons.addEventListener('click', selectAnswer)
+
+const playButton = document.getElementById('play')
+function playGame() {
+    console.log('working')
+    playButton.onclick = questions[0].question
+    playButton.classList.add("hide")
+    // question.classList.remove("hide")
+}
+playButton.addEventListener('click', playGame )
+
+
+
+
+

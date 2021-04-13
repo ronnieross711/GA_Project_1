@@ -21,9 +21,10 @@ body {
 
 .btn-grid {
 	display: grid;
-	grid-template-columns:20px 20px;
+	grid-template-columns:100px 100px;
 	gap: 5px;
 	margin: 20px 0;
+	justify-content: center;
 }
 
 .firstButton {
