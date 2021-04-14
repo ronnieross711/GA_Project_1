@@ -103,59 +103,66 @@ let questions = [
 },
 ]
 
-
-let i = 0
 let h1Question = document.getElementById("question")
 
+
+let answers = document.getElementsByClassName("answerButton")
+const introduction = document.getElementsByClassName("introduction")
+const playButton = document.getElementById('play')
 let nextButton = document.getElementById("nextButton")
+let backButton = document.getElementById("backButton")
+let i = 0
+function playGame() {
+    console.log('working')
+    playButton.classList.add("hide")
+    h1Question.innerHTML = questions[i].question
+    let choices = questions[i].choices
+    for(let index = 0; index <= choices.length; index++ ) {
+       answerButtons[index].innerHTML = choices[index]
+     } 
+}
+playButton.addEventListener('click', playGame )
+
 
 function nextQuestion(e) {
     i++
     let choices = questions[i].choices
-    
     for(let index = 0; index < choices.length; index++ ) {
-       
-    answerButtons[index].innerHTML = choices[index]
+       answerButtons[index].innerHTML = choices[index]
      }
-    
-    
     h1Question.innerHTML = questions[i].question 
 }
 nextButton.addEventListener('click', nextQuestion)
 
-let backButton = document.getElementById("backButton")
+
 
 function goBack(e) {
     i--
+    let choices = questions[i].choices
+    for(let index = 0; index < choices.length; index++ ) {
+       answerButtons[index].innerHTML = choices[index]
+     }
     h1Question.innerHTML = questions[i].question
 }
 backButton.addEventListener('click', goBack)
  // h1Question.innerHTML = questions[i].question 
 
  let answerButtons = document.querySelectorAll(".answerButton")
- console.log(answerButtons)
- 
+//  console.log(answerButtons)
 
- function selectAnswer(e) { 
+function selectAnswer(e) { 
     // check to see if user clicked correct answer
     e.preventDefault()
     console.log(questions[i].answer)
     console.log(e.target.innerText)
     if(e.target.innerText === questions[i].answer){
-
+        return alert('Correct')
     }
-    // console.log(questions[i].choices)
+    //  console.log(questions[i].choices)
 }
 answerButtons.addEventListener('click', selectAnswer)
 
-const playButton = document.getElementById('play')
-function playGame() {
-    console.log('working')
-    playButton.onclick = questions[0].question
-    playButton.classList.add("hide")
-    // question.classList.remove("hide")
-}
-playButton.addEventListener('click', playGame )
+
 
 
 
