@@ -1,7 +1,7 @@
 let questions = [
     { question: 'What year did Phish officially become a band?',
-    choices: [1984, 2001, 1981, 1994],
-    answer: 1984
+    choices: ["1984", "2001", "1981", "1994"],
+    answer: "1984"
 },
 
     
@@ -11,8 +11,8 @@ let questions = [
 },
 
 { question: "How many Festivals has Phish thrown?",
-  choices: [5, 7, 10, 11],
-  answer: 11
+  choices: ["5", "7", "10", "11"],
+  answer: "11"
 
 },
 
@@ -28,7 +28,7 @@ let questions = [
 
     
 { question: "What is the Drummer's name?",
-  choices: ["Derek Trucks", "Zach Rice", "Neil Pert", "Jon Fishmna"],
+  choices: ["Derek Trucks", "Zach Rice", "Neil Pert", "Jon Fishman"],
   answer: "Jon Fishman"
 },
 
@@ -48,13 +48,13 @@ let questions = [
 },
 
 { question: "What year did they tour in Japan?",
-  choices: [1999, 2000, 2001, 1998],
-  answer: 2000
+  choices: ["1999", "2000", "2001", "1998"],
+  answer: "2000"
 },
 
 { question: "WHat year did the NYE gag go wrong, and Trey got stuck?",
-  choices: [2019, 2018, 2015, 2021],
-  answer: 2019
+  choices: ["2019", "2018", "2015", "2021"],
+  answer: "2019"
 },
 
 { question: "Who was the first Phish Phan?",
@@ -106,33 +106,37 @@ let questions = [
 let h1Question = document.getElementById("question")
 
 
-let answers = document.getElementsByClassName("answerButton")
-const introduction = document.getElementsByClassName("introduction")
+let answerButton1 = document.getElementById("answer1")
+let answerButton2 = document.getElementById("answer2")
+let answerButton3 = document.getElementById("answer3")
+let answerButton4 = document.getElementById("answer4")
 const playButton = document.getElementById('play')
 let nextButton = document.getElementById("nextButton")
 let backButton = document.getElementById("backButton")
 let i = 0
+let answerButtons = document.querySelectorAll(".answerButton")
 function playGame() {
-    console.log('working')
+    // console.log('working')
     playButton.classList.add("hide")
     h1Question.innerHTML = questions[i].question
     let choices = questions[i].choices
     for(let index = 0; index <= choices.length; index++ ) {
-       answerButtons[index].innerHTML = choices[index]
+    //    console.log("choices", choices[index])
+        answerButtons[index].innerHTML = choices[index]
      } 
 }
-playButton.addEventListener('click', playGame )
-
 
 function nextQuestion(e) {
     i++
+    
     let choices = questions[i].choices
     for(let index = 0; index < choices.length; index++ ) {
        answerButtons[index].innerHTML = choices[index]
+       answerButtons[index].disabled = false
      }
     h1Question.innerHTML = questions[i].question 
 }
-nextButton.addEventListener('click', nextQuestion)
+
 
 
 
@@ -144,24 +148,41 @@ function goBack(e) {
      }
     h1Question.innerHTML = questions[i].question
 }
-backButton.addEventListener('click', goBack)
+
  // h1Question.innerHTML = questions[i].question 
 
- let answerButtons = document.querySelectorAll(".answerButton")
-//  console.log(answerButtons)
+//  let answers = document.querySelectorAll(".answerButton")
+//  console.log(answers)
+let score = document.getElementById("scoreBoard")
+let scoreNum = 0
+score.innerHTML = `Score:  `
 
 function selectAnswer(e) { 
+    // console.log("selectAnswer")
     // check to see if user clicked correct answer
     e.preventDefault()
-    console.log(questions[i].answer)
-    console.log(e.target.innerText)
+    // console.log("questions?", questions[i].answer)
+    // console.log("get the innerText", e.target.innerText)
+    answerButton1.disabled = true
+    answerButton2.disabled = true
+    answerButton3.disabled = true
+    answerButton4.disabled = true
     if(e.target.innerText === questions[i].answer){
-        return alert('Correct')
-    }
-    //  console.log(questions[i].choices)
-}
-answerButtons.addEventListener('click', selectAnswer)
+        score.innerHTML = `Score: ${scoreNum + 1} out of 20`
+        scoreNum = scoreNum + 1
 
+        console.log("scoreNum", scoreNum)
+        // e.target.disabled = true
+        return
+    } return
+}
+backButton.addEventListener('click', goBack)
+playButton.addEventListener('click', playGame )
+answerButton1.addEventListener('click', selectAnswer)
+answerButton2.addEventListener('click', selectAnswer)
+answerButton3.addEventListener('click', selectAnswer)
+answerButton4.addEventListener('click', selectAnswer)
+nextButton.addEventListener('click', nextQuestion)
 
 
 
