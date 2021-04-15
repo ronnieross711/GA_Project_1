@@ -20,13 +20,7 @@ let questions = [
   choices: ["Fender", "Gibson", "Modulus", 'Languedoc'],
   answer: "Languedoc"
 },
-
-{ question: "Who is the Guitar maker of Trey Anastasio's guitar?",
-  choices: ["Fender", "Gibson", "Modulus", 'Languedoc'],
-  answer: "Languedoc"
-},
-
-    
+  
 { question: "What is the Drummer's name?",
   choices: ["Derek Trucks", "Zach Rice", "Neil Pert", "Jon Fishman"],
   answer: "Jon Fishman"
