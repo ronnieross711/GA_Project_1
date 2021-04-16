@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <div id="backImg">
+    <style> 
+    body {
+        background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/phish-donut-pattern-ryan-rock-artist.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Phish Trivia</h1>
+    <div class="intro">
+    <p class="introduction">This is a trivia game about the band Phish. Let's see how much you know and 
+        how big of a Phish Head you are! Click Play to begin.
+    </p>
+    </div>
+    <button class="firstButton" id="play">Play</button>
+
+    <div class="container">
+        <div id="questionHolder">
+        
+        <h1 id="question"></h1>
+        <div class="btn-grid" id="answerButtons">
+            <button class="answerButton" id="answer1"></button>
+            <button class="answerButton" id="answer2"></button>
+            <button class="answerButton" id="answer3"></button>
+            <button class="answerButton" id="answer4"></button>
+        </div>
+        <div class="controls">
+            <button class="back" id="backButton">Back</button>
+            <button class="back" id="nextButton">Next</button>
+        </div>
+    </div>
+
+    <div id="scoreBoard"></div>
+    
+    
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
