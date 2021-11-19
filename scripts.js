@@ -98,28 +98,25 @@ let questions = [
 ]
 
 let h1Question = document.getElementById("question")
-
-
 let answerButton1 = document.getElementById("answer1")
 let answerButton2 = document.getElementById("answer2")
-let answerButton3 = document.getElementById("answer3")
+let answerButton3 = document.getElementById("answer3")  
 let answerButton4 = document.getElementById("answer4")
 const playButton = document.getElementById('play')
+const intro = document.getElementById('intro')
 let nextButton = document.getElementById("nextButton")
 let backButton = document.getElementById("backButton")
 let i = 0
 let answerButtons = document.querySelectorAll(".answerButton")
 function playGame() {
-    // console.log('working')
     playButton.classList.add("hide")
+    intro.classList.add("hide")
     h1Question.innerHTML = questions[i].question
     let choices = questions[i].choices
     for(let index = 0; index <= choices.length; index++ ) {
-    //    console.log("choices", choices[index])
         answerButtons[index].innerHTML = choices[index]
      } 
 }
-
 function nextQuestion(e) {
     i++
     
@@ -130,10 +127,6 @@ function nextQuestion(e) {
      }
     h1Question.innerHTML = questions[i].question 
 }
-
-
-
-
 function goBack(e) {
     i--
     let choices = questions[i].choices
@@ -142,33 +135,24 @@ function goBack(e) {
      }
     h1Question.innerHTML = questions[i].question
 }
-
- // h1Question.innerHTML = questions[i].question 
-
-//  let answers = document.querySelectorAll(".answerButton")
-//  console.log(answers)
 let score = document.getElementById("scoreBoard")
 let scoreNum = 0
 score.innerHTML = `Score:  `
-
 function selectAnswer(e) { 
-    // console.log("selectAnswer")
     // check to see if user clicked correct answer
     e.preventDefault()
-    // console.log("questions?", questions[i].answer)
-    // console.log("get the innerText", e.target.innerText)
     answerButton1.disabled = true
     answerButton2.disabled = true
     answerButton3.disabled = true
     answerButton4.disabled = true
     if(e.target.innerText === questions[i].answer){
         score.innerHTML = `Score: ${scoreNum + 1} out of 20`
-        scoreNum = scoreNum + 1
-
-        console.log("scoreNum", scoreNum)
-        // e.target.disabled = true
-        return
-    } return
+        scoreNum = scoreNum +1
+    }else if (e.target.innerText !== questions[i].answer) {
+        score.innerHTML = `Score: ${scoreNum - 1} out of 20`
+        scoreNum = scoreNum -1
+    }return 
+    
 }
 backButton.addEventListener('click', goBack)
 playButton.addEventListener('click', playGame )
