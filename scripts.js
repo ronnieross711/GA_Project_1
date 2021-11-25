@@ -27,8 +27,8 @@ let questions = [
 },
 
 { question: "Who was the founding memeber of Phish originally, but left the band?",
-  choices: ["Jeff HOldsworth", "Page McConnell", "Jerry Garcia", "Neil Young"],
-  answer: "Jeff HOldsworth"
+  choices: ["Jeff Holdsworth", "Page McConnell", "Jerry Garcia", "Neil Young"],
+  answer: "Jeff Holdsworth"
 },
 
 { question: "Which festival was thrown in 2003?",
@@ -116,6 +116,7 @@ function playGame() {
     for(let index = 0; index <= choices.length; index++ ) {
         answerButtons[index].innerHTML = choices[index]
      } 
+     return
 }
 function nextQuestion(e) {
     i++
@@ -126,6 +127,7 @@ function nextQuestion(e) {
        answerButtons[index].disabled = false
      }
     h1Question.innerHTML = questions[i].question 
+    return
 }
 function goBack(e) {
     i--
@@ -134,6 +136,7 @@ function goBack(e) {
        answerButtons[index].innerHTML = choices[index]
      }
     h1Question.innerHTML = questions[i].question
+    return
 }
 let score = document.getElementById("scoreBoard")
 let scoreNum = 0
@@ -154,6 +157,14 @@ function selectAnswer(e) {
     }return 
     
 }
+
+function endGame(e) {
+    e.preventDefault()
+    if (e.target == questions[18])
+    playGame()
+    return
+}
+endGame()
 backButton.addEventListener('click', goBack)
 playButton.addEventListener('click', playGame )
 answerButton1.addEventListener('click', selectAnswer)
