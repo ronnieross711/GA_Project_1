@@ -158,13 +158,13 @@ function selectAnswer(e) {
     
 }
 
-function endGame(e) {
-    e.preventDefault()
-    if (e.target == questions[18])
-    playGame()
-    return
-}
-endGame()
+// function endGame(e) {
+//     e.preventDefault()
+//     if (e.target == questions[18])
+//     playGame()
+//     return
+// }
+// endGame()
 backButton.addEventListener('click', goBack)
 playButton.addEventListener('click', playGame )
 answerButton1.addEventListener('click', selectAnswer)
